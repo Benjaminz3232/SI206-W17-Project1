@@ -202,7 +202,6 @@ class HW2TestCases(unittest.TestCase):
 		value = Deck()
 		self.assertEqual(type(value.pop_card()), type(Card()))
 
-
 	def test10(self): #Test that the return value of the play_war_game function is a tuple with three elements, the first of which is a string. (This will probably require multiple test methods!)
 		value = play_war_game(testing=True)
 		self.assertEqual(type(value[0]), str)
@@ -225,6 +224,7 @@ class HW2TestCases(unittest.TestCase):
 
 ## Here is a sample.
 class HandClassTests(unittest.TestCase):
+
 	def test99(self):
 		d = Deck()
 		h = Hand(d) # default number of cards
