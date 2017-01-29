@@ -235,42 +235,42 @@ class HandClassTests(unittest.TestCase):
 
 	# Add more here!
 
-	def test01(self): #Testing if the get_suits_availabe method returns a list of the suits
+	def test14(self): #Testing if the get_suits_availabe method returns a list of the suits
 		d = Deck()
 		h = Hand(d)
 		self.assertEqual(type(h.get_suits_available()), list)
 
-	def test02(self): #Tests if the __str__ method returns the correct string or not
+	def test15(self): #Tests if the __str__ method returns the correct string or not
 		d = Deck()
 		h = Hand(d)
 		self.assertEqual(type(h.__str__()), str)
 
-	def test03(self): #Tests whether the method get_ranks_available returns a lsit
+	def test16(self): #Tests whether the method get_ranks_available returns a lsit
 		d = Deck()
 		h = Hand(d)
 		self.assertEqual(type(h.get_ranks_available()), list)
 
-	def test04(self): #Invoking the pop_card in hand wil retun an instance of the Card Class
+	def test17(self): #Invoking the pop_card in hand wil retun an instance of the Card Class
 		d = Deck()
 		h = Hand(d)
 		self.assertEqual(type(h.place_card()), type(Card()))
 
-	def test05(self): #Test that if you create a Hand instance, it will have 5 cards in its cards instance variable
+	def test18(self): #Test that if you create a Hand instance, it will have 5 cards in its cards instance variable
 		d = Deck()
 		h = Hand(d)
 		self.assertEqual(len(h.cards_in_hand), 5) 
 
-	def test06(self): #Tests whether the list created is of propper length for method get_suits_available
+	def test19(self): #Tests whether the list created is of propper length for method get_suits_available
 		d = Deck()
 		h = Hand(d)
 		self.assertEqual(len(h.get_suits_available()), 1)
 
-	def test07(self): #Tests whether get ranks returns the propper length of the list for card ranks
+	def test20(self): #Tests whether get ranks returns the propper length of the list for card ranks
 		d = Deck()
 		h = Hand(d)
 		self.assertEqual(len(h.get_ranks_available()), 5)
 
-	def test08(self): #Tests whether length of list character is the correct amount
+	def test21(self): #Tests whether length of list character is the correct amount
 		d = Deck()
 		h = Hand(d)
 		self.assertEqual(len(h.__str__()), 71)
