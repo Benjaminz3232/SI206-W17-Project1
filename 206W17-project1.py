@@ -164,74 +164,65 @@ if __name__ == "__main__":
 
 # INCLUDE YOUR TESTS FROM HW2 HERE ####################
 
-class MyTests(unittest.TestCase):
-## Test that if you create a card with rank 12, its rank will be "Queen"
-	def test1(self):
+class HW2Tests(unittest.TestCase):
+
+	def test01(self): #Test that if you create a card with rank 12, its rank will be "Queen"
 		value = Card(0,12)
 		self.assertEqual(value.rank, "Queen")
 
-## Test that if you create a card with rank 1, its rank will be "Ace"
-	def test2(self):
+	def test02(self): #Test that if you create a card with rank 1, its rank will be "Ace"
 		value = Card(0,1)
 		self.assertEqual(value.rank, "Ace")
 
-## Test that if you create a card instance with rank 3, its rank will be 3
-	def test3(self):
+	def test03(self): #Test that if you create a card instance with rank 3, its rank will be 3
 		value = Card(3,3)
 		self.assertEqual(value.rank, 3)
 
-## Test that if you create a card instance with suit 1, it will be suit "Clubs"
-	def test4(self):
+	def test04(self): #Test that if you create a card instance with suit 1, it will be suit "Clubs"
 		value = Card(1,3)
 		self.assertEqual(value.suit, "Clubs")
 
-## Test that if you create a card instance with suit 2, it will be suit "Hearts"
-	def test5(self):
+	def test05(self): #Test that if you create a card instance with suit 2, it will be suit "Hearts"
 		value = Card(2,3)
 		self.assertEqual(value.suit, "Hearts")
 
-## Test that if you create a card instance, it will have access to a variable suit_names that contains the list ["Diamonds","Clubs","Hearts","Spades"]
-	def test6(self):
+	def test06(self): #Test that if you create a card instance, it will have access to a variable suit_names that contains the list ["Diamonds","Clubs","Hearts","Spades"]
 		value = Card()
 		self.assertEqual(value.suit_names, ["Diamonds","Clubs","Hearts","Spades"])
 
-## Test that if you invoke the __str__ method of a card instance that is created with suit=2, rank=7, it returns the string "7 of Hearts"
-	def test7(self):
+	def test07(self): #Test that if you invoke the __str__ method of a card instance that is created with suit=2, rank=7, it returns the string "7 of Hearts"
 		value = Card(2,7)
 		self.assertEqual(value.__str__(), "7 of Hearts")
 
-## Test that if you create a deck instance, it will have 52 cards in its cards instance variable
-	def test8(self):
+	def test08(self): #Test that if you create a deck instance, it will have 52 cards in its cards instance variable
 		value = Deck()
 		self.assertEqual(len(value.cards), 52)
 
-## Test that if you invoke the pop_card method on a deck, it will return a card instance.
-	def test9(self):
+	def test09(self): #Test that if you invoke the pop_card method on a deck, it will return a card instance.
 		value = Deck()
 		self.assertEqual(type(value.pop_card()), type(Card()))
 
-## Test that the return value of the play_war_game function is a tuple with three elements, the first of which is a string. (This will probably require multiple test methods!)
-	def test9_10(self):
+
+	def test10(self): #Test that the return value of the play_war_game function is a tuple with three elements, the first of which is a string. (This will probably require multiple test methods!)
 		value = play_war_game(testing=True)
 		self.assertEqual(type(value[0]), str)
-	def test9_11(self):
+	def test11(self):
 		value = play_war_game(testing=True)
 		self.assertEqual(len(value), 3)
 
-## Write at least 2 additional tests (not repeats of the above described tests). Make sure to include a descriptive message in these two so we can easily see what you are testing!
-
-	def test9_99(self):
+	def test12(self): #Tests that the type of the return value in suits is a string
 		value = Card(1,3)
 		self.assertEqual(type(value.suit), str)
 
-	def test9_999(self):
+	def test13(self): #Tests that the type of the return value in cards is a list
 		value = Deck()
 		self.assertEqual(type(value.cards), list)
 
 # END OF HW 2 TESTS ###################################
 
 
-## Add tests, as described in instructions.
+## Add tests, as described in instructions ############
+
 ## Here is a sample.
 class HandClassTests(unittest.TestCase):
 	def test_add_card(self):
