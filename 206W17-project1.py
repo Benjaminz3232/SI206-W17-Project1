@@ -258,17 +258,17 @@ class HandClassTests(unittest.TestCase):
 	def test05(self): #Test that if you create a Hand instance, it will have 5 cards in its cards instance variable
 		d = Deck()
 		h = Hand(d)
-		self.assertEqual(len(h.cards_in_hand),5) 
+		self.assertEqual(len(h.cards_in_hand), 5) 
 
 	def test06(self): #Tests whether the list created is of propper length for method get_suits_available
 		d = Deck()
 		h = Hand(d)
-		self.assertEqual(len(h.get_suits_available()),1)
+		self.assertEqual(len(h.get_suits_available()), 1)
 
 	def test07(self): #Tests whether get ranks returns the propper length of the list for card ranks
 		d = Deck()
 		h = Hand(d)
-		self.assertEqual(len(h.get_ranks_available()),5)
+		self.assertEqual(len(h.get_ranks_available()), 5)
 
 	def test08(self): #Tests whether length of list character is the correct amount
 		d = Deck()
