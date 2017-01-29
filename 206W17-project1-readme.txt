@@ -20,7 +20,8 @@ Overall Description:
 	each player's deck and playing them against each other unil one player reaches a
 	certain number of wins, then program announces the winner as well as the final score.
 	The program shows each "war" of two cards in the terminal and specifies who wins each
-	time.
+	time. The code provides someone with a strong base from which people could make other 
+	card based games fairly easily.
 
 Class Card:
 	instance -- a singular instance of class Card represents a literal card of some rank and suit. The class Card "initializes" a ranking system for the deck of cards (created buy class Deck).
