@@ -164,7 +164,7 @@ if __name__ == "__main__":
 
 # INCLUDE YOUR TESTS FROM HW2 HERE ####################
 
-class HW2Tests(unittest.TestCase):
+class HW2TestCases(unittest.TestCase):
 
 	def test01(self): #Test that if you create a card with rank 12, its rank will be "Queen"
 		value = Card(0,12)
@@ -225,7 +225,7 @@ class HW2Tests(unittest.TestCase):
 
 ## Here is a sample.
 class HandClassTests(unittest.TestCase):
-	def test_add_card(self):
+	def test99(self):
 		d = Deck()
 		h = Hand(d) # default number of cards
 		num = len(h.cards_in_hand) # length of the cards list in the hand
